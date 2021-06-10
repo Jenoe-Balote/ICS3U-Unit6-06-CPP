@@ -9,7 +9,7 @@
 #include <map>
 
 std::string ConvertCharacters(std::string hexCharacter) {
-    // This function translates the input to hexadecimal
+    // This function converts the input to hexadecimal
 
     std::string characterConvert;
     std::map<std::string, std::string> dictionary;
@@ -118,19 +118,19 @@ std::string ConvertCharacters(std::string hexCharacter) {
 
 
 main() {
-    // This function gets the input
+    // this function gets the string and outputs the converted hex list
     std::string stringInput;
     std::string convertedCharacter;
     std::list<std::string> hexList;
     std::string character;
 
-    // Input
+    // input
     std::cout << "Let's translate from a string to hexadecimal unicode!"
         << std::endl;
     std::cout << "Enter a string: ";
     getline(std::cin, stringInput);
 
-    // Call functions
+    // call function(s)
     for (int charCounter = 0; charCounter < stringInput.size();
          charCounter++) {
         character = stringInput[charCounter];
@@ -138,7 +138,7 @@ main() {
         hexList.push_back(convertedCharacter);
     }
 
-    // Output
+    // output
     std::cout << "\n" << stringInput << " in hexadecimal is: [";
     for (std::string hexChar : hexList) {
         if (hexChar == hexList.back()) {
